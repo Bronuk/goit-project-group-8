@@ -1,0 +1,27 @@
+{{#each this}}
+    <li class="movie-item">
+        <div class="movie-card">
+          <a href>
+            <img
+              class="card-img"
+              src="https://www.themoviedb.org/t/p/w500{{poster_path}}"
+              loading="lazy"
+              alt="{{title}}"
+              title="{{title}}"
+              data-id="{{id}}"
+            />
+          </a>
+          <div class="card-info">
+            <h2 class="card-title">{{title}}</h2>
+            <div class="card-info-wraper">
+              <ul class="card-genres">
+                <li class="card-genre">Action</li>
+                <li class="card-genre">Adventure</li>
+                <li class="card-genre">Fantasy</li>
+              </ul>
+              <p class="card-year">| 2021</p>
+            </div>
+          </div>
+        </div>
+      </li>
+{{/each}}

@@ -1,0 +1,56 @@
+.card-img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  //   height: 398px;
+}
+
+.card-info {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card-title {
+  color: var(--second-text-color);
+  text-transform: uppercase;
+
+  line-height: 1.33em;
+}
+
+.card-genres,
+.card-year {
+  color: var(--third-text-color);
+}
+
+.card-genres {
+  display: inline-flex;
+  flex-wrap: wrap;
+  //   margin-right: 5px;
+}
+
+.card-genre {
+  margin-right: 5px;
+}
+
+.card-info-wraper {
+  display: flex;
+}
+
+@media screen and (max-width: $max-mobile) {
+  .card__img {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  .card__img {
+    width: 294px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .card-img {
+    width: 274px;
+  }
+}

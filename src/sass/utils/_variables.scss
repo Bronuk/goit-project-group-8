@@ -1,0 +1,20 @@
+:root {
+  --accent-color: #d41443;
+  --first-text-color: #ffffff;
+  --second-text-color: #000000;
+  --third-text-color: #ff6b08;
+  --forth-text-color: #545454;
+  --fifth-text-color: #8c8c8c;
+  --footer-background-color: #f7f7f7;
+  --btn-color: #ff6b01;
+  --btn-pagination-color: #ff6b08;
+  --alert-text-color: #ff001b;
+}
+/*----  Breakpoints  -------*/
+$mobile: 320px;
+$max-mobile: 767px;
+
+$tablet: 768px;
+$max-tablet: 1023px;
+
+$desktop: 1024px;

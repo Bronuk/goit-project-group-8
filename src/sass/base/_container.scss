@@ -1,0 +1,14 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  width: $mobile;
+  padding: 0 20px;
+
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}

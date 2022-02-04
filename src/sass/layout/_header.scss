@@ -1,0 +1,116 @@
+.page-header {
+  //   position: absolute;
+  //   width: 100%;
+  // height: 230px;
+  padding: 41px 71px;
+  justify-content: space-between;
+  background-image: url('../images/Rectangle1200.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-header {
+  .container {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header-list {
+  display: flex;
+  margin-left: 95px;
+}
+
+.header-list__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 39px;
+  }
+}
+
+.header-list__link {
+  font-size: 12px;
+  color: white;
+  &:hover,
+  &:focus {
+    color: var(--third-text-color);
+  }
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin: 41px 0 16px 15px;
+  font-size: 30px;
+  color: white;
+}
+
+.header-list {
+  display: flex;
+  margin-left: 95px;
+}
+
+.header-list .current::after {
+  content: '';
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: 1px solid;
+  border-radius: 2px;
+  color: var(--third-text-color);
+}
+
+.search {
+  &__input {
+    width: 320px;
+    padding: 12px 24px;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 15px;
+    line-height: 16px;
+    background-image: url('../images/search.svg');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+
+    color: #959594;
+    border-radius: 50px;
+    border: 1px solid #cbcbcb;
+    transition: all 250ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      padding: 12px 0;
+      outline: 0;
+      border: 1px solid transparent;
+      border-bottom: 1px solid var(--third-text-color);
+      border-radius: 0;
+      color: white;
+      background-position: 100% center;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.search__container {
+  display: flex;
+  justify-content: center;
+}
+
+.img__logo {
+  margin-right: 10px;
+  margin-bottom: 0px;
+  display: inline;
+}
