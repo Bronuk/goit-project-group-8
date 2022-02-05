@@ -15,11 +15,11 @@
             <h2 class="card-title">{{title}}</h2>
             <div class="card-info-wraper">
               <ul class="card-genres">
-                <li class="card-genre">Action</li>
-                <li class="card-genre">Adventure</li>
-                <li class="card-genre">Fantasy</li>
+                {{#each genres}}         
+                  <li class="card-genre">{{name}}{{#unless @last}},{{/unless}}</li>
+                {{/each}}
               </ul>
-              <p class="card-year">| 2021</p>
+              <p class="card-year">| {{release_date}}</p>
             </div>
           </div>
         </div>
