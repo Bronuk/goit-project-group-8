@@ -1,3 +1,3 @@
 const moviesGallery = document.querySelector('.movies-list');
-
-export { moviesGallery };
+const gallery = document.querySelector('.movies-list')
+export { moviesGallery, gallery };

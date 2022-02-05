@@ -1,0 +1,41 @@
+
+
+
+<div class="backdrops">
+<div class="modal">
+<img
+              class="modal-img"
+              src="https://image.tmdb.org/t/p/w500{{poster_path}}"
+              loading="lazy"
+              alt="{{title}}"
+              title="{{title}}"
+              data-id="{{id}}"
+            />
+<button class="modal__close-btn"> 
+{{!-- <img class="" src="../../images/modal-close.svg" alt=""> --}}
+</button>
+<h2 class="modal__head">{{title}}</h2>
+<ul class="modal__list">
+    <li>
+        <p class="modal__list__item">Vote / Votes</p><p>{{vote_average}}</p><span>/</span><p>{{vote_count}}</p>
+    </li>
+    <li>
+        <p class="modal__list__item">Popularity</p><p>{{popularity}}</p>
+    </li>
+    <li>
+        <p class="modal__list__item">Original Title</p><p>{{original_title}}</p>
+    </li>
+    <li>
+        <p class="modal__list__item">Genre</p>  <p class="cardItem__genreList">{{#each genres}}
+                <span class="cardItem__genre_data">{{this.name}}</span>
+                {{/each}}</p>
+    </li>
+</ul>
+<p class="modal__text">ABOUT</p><p>{{overview}}</p>
+<p></p>
+
+<button class="modal__btn__orange">ADD TO WATCHED</button>
+<button class="modal__btn__white">ADD TO QUEUE</button>
+</div>
+</div>
+
