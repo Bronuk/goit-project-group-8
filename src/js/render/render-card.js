@@ -14,11 +14,13 @@ gallery.addEventListener('click', getGallery)
 
 const filmotekaLibrary = new FilmotekaApiService();
 
+let movieId = ''
 function getGallery (e){
     e.preventDefault()
     if (e.target.nodeName !== 'IMG') return;
        try{ filmotekaLibrary.getMovieDetails(e.target.dataset.id).then(data => {
-        console.log(data)
+          movieId = e.target.dataset.id;
+          console.log(movieId)
             // const getGanr = getGanres(data, genresJSON)
             const marcup =  movieModal(data)
             const instance = basicLightbox.create(marcup)
@@ -46,8 +48,10 @@ function getGallery (e){
       }
 
 
-
+     
 
     
 
 }
+
+export {movieId}
