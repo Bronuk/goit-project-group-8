@@ -1,7 +1,7 @@
 
 
 
-<div class="backdrops">
+
 <div class="modal">
 <img
               class="modal-img"
@@ -10,32 +10,44 @@
               alt="{{title}}"
               title="{{title}}"
               data-id="{{id}}"
+              onerror="this.onerror=null;this.src='https://i.pinimg.com/originals/74/3d/b2/743db230d891b47c1d8c66b161111b91.jpg'" loading="lazy"
             />
 <button class="modal__close-btn"> 
-{{!-- <img class="" src="../../images/modal-close.svg" alt=""> --}}
+
 </button>
+<div>
 <h2 class="modal__head">{{title}}</h2>
+<div class="modal__container">
 <ul class="modal__list">
     <li>
-        <p class="modal__list__item">Vote / Votes</p><p>{{vote_average}}</p><span>/</span><p>{{vote_count}}</p>
+        <p class="modal__list__item">Vote / Votes</p>
     </li>
     <li>
-        <p class="modal__list__item">Popularity</p><p>{{popularity}}</p>
+        <p class="modal__list__item">Popularity</p>
     </li>
     <li>
-        <p class="modal__list__item">Original Title</p><p>{{original_title}}</p>
+        <p class="modal__list__item">Original Title</p>
     </li>
     <li>
-        <p class="modal__list__item">Genre</p>  <p class="cardItem__genreList">{{#each genres}}
-                <span class="cardItem__genre_data">{{this.name}}</span>
-                {{/each}}</p>
+        <p class="modal__list__item">Genre</p> 
     </li>
 </ul>
-<p class="modal__text">ABOUT</p><p>{{overview}}</p>
+<ul class="modal__list_variable">
+    <li class="modal__vote modal__list__item"><p>{{vote_average}}</p><span>/</span><p>{{vote_count}}</p></li>
+    <li class="modal__list__item"><p>{{popularity}}</p></li>
+    <li class="modal__list__item"><p>{{original_title}}</p></li>
+    <li class="modal__list__item"> <p class="cardItem__genreList">{{#each genres}}
+                <span class="cardItem__genre_data">{{this.name}}</span>
+                {{/each}}</p></li>
+</ul>
+</div>
+<p class="modal__text">ABOUT</p><p class="modal__text-about">{{overview}}</p>
 <p></p>
-
+<div>
 <button class="modal__btn__orange">ADD TO WATCHED</button>
-<button class="modal__btn__white">ADD TO QUEUE</button>
+<button class="modal__btn__white">DD TO QUEUE</button>
 </div>
 </div>
+</div>
+
 
