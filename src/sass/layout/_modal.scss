@@ -63,8 +63,22 @@
       font-family: Roboto;
       font-size: 20px;
       margin-top: 30px;
+      @media screen and( min-width: $tablet){
+          margin-top: 5px;
+          
+      }
+      @media screen and ( min-width: $desktop) {
+        font-size: 30px;
+      }
   }
+  
+.modal__containet-text{
+    margin-left: 0px;
+    @media screen  and( min-width: $tablet){
+        margin-left: 20px;
+    }
 
+}
   .modal__container{
       display: flex;
       margin-top: 20px;
@@ -74,17 +88,25 @@
   .modal__list{
       font-size: 12px;
       color: #8C8C8C;
-
+      width: 90px;
   }
   
   .modal__list_variable{
       margin-left: 50px;
       font-size: 12px;
       font-weight: 500;
+      @media screen and( min-width: $tablet){
+         margin-left: 30px; 
+      }
+      @media screen and ( min-width: $desktop){
+        margin-left: 80px; 
+            
+        }
   }
 
   .modal__list__item{
       margin-bottom: 10px;
+      
   }
   
   .modal__vote{
@@ -101,11 +123,56 @@
       margin-top: 10px;
       line-height: 20px;
       color: black;
+      height: 100px;
+      overflow: scroll;
+      @media screen and ( min-width: $desktop){
+      overflow: hidden;
+          
+      }
+  }
+  .modal__buttons{
+      display: flex;
+    //   align-items: center;
+    // //   justify-items: flex-end;
+      margin-top: 20px;
+      
   }
 
-  .modal__btn{
+  .modal__btn__orange,
+  .modal__btn__white{
       width: 113px;
       height: 44px;
-      border-radius: 10px;
-      margin-left: 20px;
+      border-radius: 5px;
+      font-family: roboto;
+      font-weight: 500;
+      @media screen and( min-width: $tablet){
+        width: 130px;  
+      }
+      
   }
+  .modal__btn__white{
+      margin-left: 15px;
+      background-color: white;
+      border: 1px solid;
+      margin-right: auto;
+  }
+
+  .modal__btn__orange{
+      color: white;
+      background-color: #FF6B01;
+      border: 1px solid #FF6B01;
+      margin-left: auto;
+  }
+  .movie_name{
+      text-transform: uppercase;}
+
+.vote{
+    background-color: #FF6B01;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px;
+}
+.vote_count{
+    margin-left: 5px;
+}

@@ -15,7 +15,7 @@
 <button class="modal__close-btn"> 
 
 </button>
-<div>
+<div class="modal__containet-text">
 <h2 class="modal__head">{{title}}</h2>
 <div class="modal__container">
 <ul class="modal__list">
@@ -33,9 +33,9 @@
     </li>
 </ul>
 <ul class="modal__list_variable">
-    <li class="modal__vote modal__list__item"><p>{{vote_average}}</p><span>/</span><p>{{vote_count}}</p></li>
+    <li class="modal__vote modal__list__item"><p class="vote">{{vote_average}}</p><span>/</span><p class="vote_count">{{vote_count}}</p></li>
     <li class="modal__list__item"><p>{{popularity}}</p></li>
-    <li class="modal__list__item"><p>{{original_title}}</p></li>
+    <li class="modal__list__item movie_name"><p>{{original_title}}</p></li>
     <li class="modal__list__item"> <p class="cardItem__genreList">{{#each genres}}
                 <span class="cardItem__genre_data">{{this.name}}</span>
                 {{/each}}</p></li>
@@ -43,9 +43,9 @@
 </div>
 <p class="modal__text">ABOUT</p><p class="modal__text-about">{{overview}}</p>
 <p></p>
-<div>
+<div class="modal__buttons">
 <button class="modal__btn__orange">ADD TO WATCHED</button>
-<button class="modal__btn__white">DD TO QUEUE</button>
+<button class="modal__btn__white">ADD TO QUEUE</button>
 </div>
 </div>
 </div>
