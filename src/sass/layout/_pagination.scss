@@ -9,6 +9,10 @@
   }
 }
 
+.tui-pagination .tui-page-btn {
+  color: red;
+}
+
 .tui-page-btn.tui-first.hide-first,
 .tui-page-btn.tui-first.tui-is-disabled,
 .tui-page-btn.tui-last.hide-last,
@@ -48,6 +52,7 @@
   color: var(--second-text-color);
   font-family: Roboto;
   transition: all 250ms ease-in-out;
+  height: inherit;
   &:hover {
     background: var(--btn-pagination-color);
     color: var(--first-text-color);
