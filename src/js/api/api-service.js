@@ -1,18 +1,18 @@
 const axios = require('axios').default;
 import { BASE_URL, API_KEY, SEARCH_URL } from './api-variables';
 
-// 'https://api.themoviedb.org/3/trending/movie/week?api_key=fa50958034c24b0612c0304f24903582'
-
 export default class filmotekaApiService {
   constructor() {
     this.searchquery = '';
-    this.page = 1;
-    this.totalPages = 0;
+    this.page = 1; // ???
+    this.totalPages = 0; // ???
   }
 
-  async getDataTrends() {
+  async getDataTrends(page) {
     try {
-      const { data } = await axios.get(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`);
+      const { data } = await axios.get(
+        `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&page=${page}`,
+      );
 
       return data;
     } catch (error) {
