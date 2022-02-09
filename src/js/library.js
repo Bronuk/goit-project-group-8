@@ -59,8 +59,10 @@ function onQueueBtnClick() {
   for (const all of queueFilm) {
     try {
       filmoteka.getMovieDetails(all).then(data => {
-        ({ ...data, release_date: data.release_date.split('-')[0] })
-        console.log(data)
+        ({ ...data })
+
+        data.release_date = getYear(data.release_date);
+        data.genres = data.genres.slice(0, 3)
         renderAllMovies(data);
       })
     } catch (error) {
