@@ -1,15 +1,3 @@
-.movie-card {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.movie-card:focus,
-.movie-card:hover {
-  transform: scale(1.05);
-  box-shadow: 5px 5px 5px 1px rgb(255 107 1 / 43%);
-  cursor: pointer;
-}
-
 .card-img {
   border-radius: 5px;
   margin-bottom: 10px;
