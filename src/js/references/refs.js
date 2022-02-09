@@ -1,3 +1,5 @@
 const gallery = document.querySelector('.movies-list');
 const input = document.querySelector('.search__input');
-export { gallery, input };
+const paginationContainer = document.getElementById('tui-pagination-container');
+
+export { gallery, input, paginationContainer };
