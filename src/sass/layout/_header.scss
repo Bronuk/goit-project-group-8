@@ -1,19 +1,29 @@
 .page-header {
-  //   position: absolute;
-  //   width: 100%;
-  // height: 230px;
-  padding: 41px 71px;
-  justify-content: space-between;
-  background-image: url('../images/Rectangle1200.jpg');
-  background-repeat: no-repeat;
+  // width: 100%;
+  // padding: 45px 20px;
+  height: 230px;
+  background-image: url('../images/Rectangle320.jpg');
   background-position: center;
   background-size: cover;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    background-image: url('../images/Rectangle768.jpg');
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url('../images/Rectangle1200.jpg');
+  }
 }
 
 .page-header {
   .container {
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      padding: 0 40px;
+    }
+    @media screen and (min-width: $tablet) {
+      padding: 0px;
+    }
   }
 }
 
@@ -115,4 +125,10 @@
   margin-right: 10px;
   margin-bottom: 0px;
   display: inline;
+}
+
+#text-logo {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
 }
