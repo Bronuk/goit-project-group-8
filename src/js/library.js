@@ -1,8 +1,12 @@
 import { gallery } from './references/refs'
 import FilmotekaApiService from '../js/api/api-service';
 const filmoteka = new FilmotekaApiService();
-import { getMoviesWithYearAndGenres } from '../js/processing/moviesDataAdaptation';
+import { getYear } from '../js/processing/moviesDataAdaptation';
 import movieFromLocal from '../templates/movieFromLocal.hbs'
+import genresJSON from './data/genres.json';
+import { get } from 'lodash';
+
+
 
 const watchedBtn = document.querySelector('.watchedBtn');
 const queueBtn = document.querySelector('.queueBtn')
@@ -31,8 +35,10 @@ function onWatchedBtnClick() {
   for (const all of watchedFilm) {
     try {
       filmoteka.getMovieDetails(all).then(data => {
-        ({ ...data, release_date: data.release_date.split('-')[0] })
-        console.log(data)
+        ({ ...data })
+
+        data.release_date = getYear(data.release_date);
+        data.genres = data.genres.slice(0, 3)
         renderAllMovies(data);
       })
     } catch (error) {
