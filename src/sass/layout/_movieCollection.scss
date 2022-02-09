@@ -5,13 +5,25 @@
 
   padding-top: 60px;
 }
+.movie-link{
+  cursor: pointer;
+  
+}
 
 // .movie-card {
 //   outline: 1px solid red;
 // }
 
 .movie-item {
+  cursor: pointer;
   display: block;
+  border-radius: 5px;
+    &:hover,
+    &:focus {
+      box-shadow: (5px -2px 5px #8C8C8C);
+      opacity: 0.9;
+    }
+  
 }
 
 @media screen and (max-width: $max-mobile) {
@@ -55,6 +67,7 @@
 
   .card-img {
     height: 411px;
+    cursor: pointer;
   }
 
   .movie-item {

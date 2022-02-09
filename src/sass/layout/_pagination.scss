@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   margin: 40px 0;
+  
   @media screen and (min-width: $tablet) {
     margin-top: 50px;
     margin-bottom: 60px;
@@ -38,6 +39,7 @@
 }
 
 .tui-pagination .tui-page-btn {
+  cursor: pointer;
   display: flex;
   border: none;
   align-items: center;

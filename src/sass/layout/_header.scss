@@ -34,6 +34,7 @@
   color: white;
   &:hover,
   &:focus {
+    cursor: pointer;
     color: var(--third-text-color);
   }
 }
@@ -47,6 +48,7 @@
   margin: 41px 0 16px 15px;
   font-size: 30px;
   color: white;
+  cursor: pointer;
 }
 
 .header-list {
