@@ -117,4 +117,4 @@ window.addEventListener("load",function(){document.querySelector(".loader").styl
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/loadStartPage"),require("./js/searchMovie"),require("./js/render/render-card"),require("./js/render/render-spinner");
 },{"./sass/main.scss":"clu1","./js/loadStartPage":"u6tz","./js/searchMovie":"HUSp","./js/render/render-card":"MBGU","./js/render/render-spinner":"QgYH"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-project-group-8/src.65c5dc12.js.map
+//# sourceMappingURL=/goit-project-group-8/src.fad3626b.js.map
