@@ -4,7 +4,7 @@ import movieModal from '../../templates/movieCard';
 // import movie-link from '../../templates/mviesCollection'
 import FilmotekaApiService from '../../js/api/api-service';
 const axios = require('axios').default;
-import {gallery} from '../references/refs'
+import { gallery } from '../references/refs'
 
 
 const card = document.querySelector('.movie-item') 
@@ -23,7 +23,7 @@ function getGallery (e){
     && e.target.nodeName !== 'DIV'
     && e.target.nodeName !== 'A'
     && e.target.nodeName !== 'LI') return;
-       try{ filmotekaLibrary.getMovieDetails(movieId).then(data => {
+      try{ filmotekaLibrary.getMovieDetails(movieId).then(data => {
           
           
           
@@ -34,25 +34,25 @@ function getGallery (e){
             const closeBtn = document.querySelector('.modal__close-btn');
       closeBtn.addEventListener('click', closeModal);
       window.addEventListener('keydown', closeModalHandler);
-      
-      
+
+
       // else if (!modal){
       //   console.log(modal)
       //   document.body.style.overflow = "scroll";
       // }
-        // if(instance.show() === true){
-        //   document.body.style.overflow = "hidden";
-        // } 
-        // if(instance.close()=== true){
-        //   document.body.style.overflow = "scroll";
-        // }
-      
+      // if(instance.show() === true){
+      //   document.body.style.overflow = "hidden";
+      // } 
+      // if(instance.close()=== true){
+      //   document.body.style.overflow = "scroll";
+      // }
+
 
 
       function closeModalHandler(e) {
         if (e.code === 'Escape') {
-            instance.close();
-            // document.body.style.overflow = "scroll";
+          instance.close();
+          // document.body.style.overflow = "scroll";
           window.removeEventListener('keydown', closeModalHandler);
         }
       }
@@ -63,7 +63,7 @@ function getGallery (e){
         window.removeEventListener('keydown', closeModalHandler);
       }
 
-      
+
 
 
 
@@ -71,58 +71,55 @@ function getGallery (e){
       const addToQueue = document.querySelector('.modal__btn__white');
       addToWatched.addEventListener('click', () => {
         addToWatched.style.backgroundColor = '#FF6B01'
-        addToWatched.style.color="white"
+        addToWatched.style.color = "white"
         addToWatched.style.border = 'none'
 
-        if(localStorage.getItem('watched') == null) {
+        if (localStorage.getItem('watched') == null) {
           localStorage.setItem('watched', '[]');
-          
+
         }
         let allEntries = JSON.parse(localStorage.getItem('watched'));
-        if(!allEntries.includes(movieId)){
+        if (!allEntries.includes(movieId)) {
           allEntries.push(movieId);
           localStorage.setItem('watched', JSON.stringify(allEntries));
-        } 
+        }
       });
       addToQueue.addEventListener('click', () => {
         addToQueue.style.backgroundColor = '#FF6B01'
-        addToQueue.style.color="white"
+        addToQueue.style.color = "white"
         addToQueue.style.border = 'none'
-        if(localStorage.getItem('queue') == null) {
+        if (localStorage.getItem('queue') == null) {
           localStorage.setItem('queue', '[]');
         }
         let allEntries = JSON.parse(localStorage.getItem('queue'));
-        if(!allEntries.includes(movieId)){
+        if (!allEntries.includes(movieId)) {
           allEntries.push(movieId);
           localStorage.setItem('queue', JSON.stringify(allEntries));
-        } 
+        }
       });
       //  active or disable buttons
       let allEntries = JSON.parse(localStorage.getItem('watched'));
 
-      if(allEntries.includes(movieId)){
+      if (allEntries.includes(movieId)) {
         addToWatched.style.backgroundColor = '#FF6B01'
-        addToWatched.style.color="white"
+        addToWatched.style.color = "white"
         addToWatched.style.border = 'none'
         addToWatched.disabled = true;
-        
+
       }
 
       let allEntrie = JSON.parse(localStorage.getItem('queue'))
 
-      if(allEntrie.includes(movieId)){
+      if (allEntrie.includes(movieId)) {
         addToQueue.style.backgroundColor = '#FF6B01'
-        addToQueue.style.color="white"
+        addToQueue.style.color = "white"
         addToQueue.style.border = 'none'
         addToQueue.disabled = true;
-        
+
       }
-        })
-       }catch (error) {
-        console.log(error);
-      }
+    })
+  } catch (error) {
+    console.log(error);
+  }
 
 }
-
-
-
