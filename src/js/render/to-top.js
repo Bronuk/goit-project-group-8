@@ -1,19 +1,30 @@
-import throttle from 'lodash.throttle';
+const showOnPx = 100;
+const backToTopButton = document.querySelector('.back-to-top');
 
-const upButton = document.querySelector('[data-up-btn]');
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
 
-window.addEventListener('scroll', throttle(hideElOnScroll(upButton), 250));
-upButton.addEventListener('click', toPageTopOnClick);
+const goToTop = () => {
+  document.body.scrollIntoView({
+    behavior: 'smooth',
+  });
+};
 
-function hideElOnScroll(el) {
-  return function hideOnScroll(e) {
-    if (scrollY < document.documentElement.clientHeight) {
-      el.classList.add('visually-hidden');
-    } else {
-      el.classList.remove('visually-hidden');
-    }
-  };
-}
-function toPageTopOnClick(e) {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+document.addEventListener('scroll', () => {
+  console.log('Scroll Height: ', scrollContainer().scrollHeight);
+  console.log('Client Height: ', scrollContainer().clientHeight);
+
+  const scrolledPercentage =
+    (scrollContainer().scrollTop /
+      (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+    100;
+
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove('hidden');
+  } else {
+    backToTopButton.classList.add('hidden');
+  }
+});
+
+backToTopButton.addEventListener('click', goToTop);
