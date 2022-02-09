@@ -119,4 +119,4 @@ window.addEventListener("load",function(){document.querySelector(".loader").styl
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/loadStartPage"),require("./js/render/render-card"),require("./js/render/render-spinner");
 },{"./sass/main.scss":"clu1","./js/loadStartPage":"u6tz","./js/render/render-card":"MBGU","./js/render/render-spinner":"QgYH"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-project-group-8/src.6bac92d7.js.map
+//# sourceMappingURL=/goit-project-group-8/src.a271802f.js.map
