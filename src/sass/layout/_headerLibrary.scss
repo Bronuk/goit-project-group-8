@@ -17,6 +17,7 @@
 .library-btn {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .btn__libr {
@@ -31,6 +32,7 @@
   border: 2px solid #ffffff;
   padding: 14px 38px 14px 38px;
   border-radius: 5px;
+  cursor: pointer;
   &:not(:last-child) {
     margin-right: 15px;
   }

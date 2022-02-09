@@ -26,12 +26,13 @@
 .card-title {
   color: var(--second-text-color);
   text-transform: uppercase;
-
+  cursor: pointer;
   line-height: 1.33em;
 }
 
 .card-genres,
 .card-year {
+  cursor: pointer;
   color: var(--third-text-color);
 }
 
