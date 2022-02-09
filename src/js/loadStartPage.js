@@ -68,6 +68,7 @@ async function getSearch(searchQuery) {
 }
 
 /*---------------------------------------------*/
+
 function checkIfEmptyBeforeRender(movies) {
   if (movies.length === 0) {
     // console.log('No matches found!');
