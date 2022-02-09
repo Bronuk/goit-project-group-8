@@ -1,16 +1,29 @@
 .lbrary-header {
-  padding: 41px 71px;
-  justify-content: space-between;
-  background-image: url('../images/MyLib1024.jpg');
-  background-repeat: no-repeat;
+  // width: 100%;
+  // padding: 45px 20px;
+  height: 230px;
+  background-image: url('../images/MyLib320.jpg');
   background-position: center;
   background-size: cover;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    background-image: url('../images/MyLib768.jpg');
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url('../images/MyLib1024.jpg');
+  }
 }
 
 .lbrary-header {
   .container {
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      padding: 0 40px;
+    }
+    @media screen and (min-width: $tablet) {
+      padding: 0px;
+    }
   }
 }
 
