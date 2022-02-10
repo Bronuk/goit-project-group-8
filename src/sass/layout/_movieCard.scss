@@ -1,24 +1,28 @@
 .movie-card {
-  
-
   cursor: pointer;
   display: block;
   border-radius: 5px;
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s;
   &:hover,
   &:focus {
     transform: scale(1.02);
-    box-shadow: (5px 5px 5px 1px #8c8c8c);
+
     opacity: 0.9;
   }
-  
 }
 
 .card-img {
   border-radius: 5px;
   margin-bottom: 10px;
   //   height: 398px;
+  &:hover {
+    box-shadow: 10px -10px 5px -3px rgba(34, 60, 80, 0.2);
+  }
 }
 
 .card-info {
