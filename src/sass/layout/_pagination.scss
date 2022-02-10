@@ -1,17 +1,14 @@
+// @charset 'utf-8';
+
 .tui-pagination {
   height: 40px;
   display: flex;
   justify-content: center;
   margin: 40px 0;
-  
   @media screen and (min-width: $tablet) {
     margin-top: 50px;
     margin-bottom: 60px;
   }
-}
-
-.tui-pagination .tui-page-btn {
-  color: red;
 }
 
 .tui-page-btn.tui-first.hide-first,
@@ -39,7 +36,6 @@
 }
 
 .tui-pagination .tui-page-btn {
-  cursor: pointer;
   display: flex;
   border: none;
   align-items: center;
@@ -68,12 +64,21 @@
   background: var(--btn-pagination-color);
   border-color: var(--btn-pagination-color);
 }
-// .tui-pagination .tui-is-selected,
-// .tui-pagination strong {
-//   color: var(--first-text-color);
-//   background: var(--btn-pagination-color);
-//   cursor: default;
-// }
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  color: var(--first-text-color);
+  background: var(--btn-pagination-color);
+  cursor: default;
+}
+.tui-pagination .tui-prev-is-ellip,
+.tui-pagination .tui-next-is-ellip {
+  border: 0;
+}
+.tui-pagination .tui-first + .tui-prev,
+.tui-pagination .tui-next + .tui-last,
+.tui-pagination .tui-next-is-ellip {
+  border-left: 0;
+}
 
 .tui-pagination .tui-is-disabled:hover {
   background: transparent;
@@ -84,11 +89,6 @@
   background: var(--footer-background-color);
 }
 
-.tui-pagination .tui-prev,
-.tui-pagination .tui-next {
-  color: var(--second-text-color);
-  background: var(--footer-background-color);
-}
 .tui-pagination .tui-prev-is-ellip,
 .tui-pagination .tui-next-is-ellip {
   font-family: Roboto;
@@ -102,7 +102,7 @@
 .tui-pagination .tui-next-is-ellip:hover,
 .tui-pagination .hide-prev:hover,
 .tui-pagination .hide-next:hover {
-  background: var(--btn-pagination-color);
+  background-color: var(--btn-pagination-color);
 }
 
 .tui-pagination .tui-prev-is-ellip:hover > .tui-ico-ellip,
@@ -116,18 +116,27 @@
   background: var(--btn-pagination-color);
 }
 
-.tui-pagination .tui-ico-ellip {
-  margin-top: 0;
-}
-
 .tui-pagination .tui-first-child.tui-is-selected {
   border-left: none;
 }
 
-.tui-pagination .tui-ico-ellip {
-  width: 11px;
+.tui-pagination .tui-ico-next {
+  text-indent: -9999px;
+  background-image: url(/images/icon-right.svg);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
   fill: var(--second-text-color);
-  transition: all 250ms ease-in-out;
+}
+
+.tui-pagination .tui-ico-prev {
+  text-indent: -9999px;
+
+  background-image: url(/images/icon-left.svg);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  fill: var(--second-text-color);
 }
 
 .tui-pagination .tui-prev,
@@ -139,4 +148,10 @@
   line-height: 16px;
   fill: var(--second-text-color);
   transition: all 250ms ease-in-out;
+  color: var(--second-text-color);
+  background: var(--footer-background-color);
+}
+.tui-pagination .tui-last,
+.tui-pagination .tui-first {
+  visibility: hidden;
 }

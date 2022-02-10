@@ -3,7 +3,7 @@
 // }
 .modal{
     margin-top: 0px;
-    width: 55vh;
+    width: 75vh;
     // margin: 100px 70px;
     background-color: white;
     height: 95vh;
@@ -165,8 +165,10 @@
       border-radius: 5px;
       font-family: roboto;
       font-weight: 500;
-      background-color: white;
-      border: 1px solid;
+      background-color: #FF6B01;
+      color: white;
+      border: none;
+      transition: all 0.1s ease-in-out;
       @media screen and( min-width: $tablet){
         width: 130px;  
       }
@@ -177,9 +179,10 @@
 .modal__btn__orange:focus,
 .modal__btn__white:hover,
 .modal__btn__white:focus{
-    color: white;
-  background-color:  orange;
-  border: none;
+   
+    
+  background-color:  #fa8430ee;
+  
   cursor: pointer;
   
 }
