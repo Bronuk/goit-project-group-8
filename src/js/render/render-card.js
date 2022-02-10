@@ -68,13 +68,10 @@ function getGallery(e) {
         window.removeEventListener('keydown', closeModalHandler);
       }
 
-      if (localStorage.getItem('queue') == null) {
-        localStorage.setItem('queue', '[]');
-      }
-      if (localStorage.getItem('watched') == null) {
-        localStorage.setItem('watched', '[]');
+      // if (localStorage.getItem('queue') == null) {
+      //   localStorage.setItem('queue', '[]');
+      // }
 
-      }
 
       let allQueue = JSON.parse(localStorage.getItem('queue'));
       let allWatched = JSON.parse(localStorage.getItem('watched'));
@@ -116,10 +113,10 @@ function getGallery(e) {
         // addToWatched.style.border = 'none'
         addToWatched.textContent = 'REMOVE FROM WATCHED';
 
-        // if (localStorage.getItem('watched') == null) {
-        //   localStorage.setItem('watched', '[]');
+        if (localStorage.getItem('watched') == null) {
+          localStorage.setItem('watched', '[]');
 
-        // }
+        }
 
         if (!allWatched.includes(movieId)) {
           allWatched.push(movieId);
@@ -142,9 +139,9 @@ function getGallery(e) {
         textButtonQ(movieId)
         addToQueue.textContent = 'REMOVE FROM QUEUE';
 
-        // if (localStorage.getItem('queue') == null) {
-        //   localStorage.setItem('queue', '[]');
-        // }
+        if (localStorage.getItem('queue') == null) {
+          localStorage.setItem('queue', '[]');
+        }
         // let allEntries = JSON.parse(localStorage.getItem('queue'));
         if (!allQueue.includes(movieId)) {
           allQueue.push(movieId);
