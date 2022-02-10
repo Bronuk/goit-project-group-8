@@ -1,37 +1,30 @@
-import * as basicLightbox from 'basiclightbox';
-import data from '../data/teem.json';
+import teamOfList from '../data/teem';
 import teamCardTpl from '../../templates/teemModal.hbs';
+import * as basicLightbox from 'basiclightbox';
+import 'basiclightbox/dist/basicLightbox.min.css';
 
-teem.addEventListener('click', onTeamModalShow);
+const teamList = document.querySelector('.team-list');
 
-function onTeamModalShow(e) {
-  const teamCardsMarkup = teamCardTpl(data);
-  document.addEventListener('click', onClick);
-  document.addEventListener('keydown', onCloseEsc);
+const modal = basicLightbox.create(document.querySelector('.lightbox'), {
+  onShow: () => {
+    document.body.classList.add('body-lightbox');
+    window.addEventListener('keydown', onKeyPressEsc);
+  },
+  onClose: () => {
+    document.body.classList.remove('body-lightbox');
+    window.removeEventListener('keydown', onKeyPressEsc);
+  },
+});
 
-  function onClick(e) {
-    e.target.classList.value === 'cards-container js-team list' ||
-    e.target.classList.value === 'team__title' ||
-    e.target.classList.value === 'team__title_accent' ||
-    e.target.classList.value === 'basicLightbox'
-      ? teamModal.close()
-      : teamModal.show();
+teem.addEventListener('click', modal.show);
+markupTeamCards(teamOfList);
+
+function markupTeamCards(team) {
+  teamList.insertAdjacentHTML('beforeend', teamCardTpl(team));
+}
+
+function onKeyPressEsc(e) {
+  if (e.code === 'Escape') {
+    modal.close();
   }
-
-  function onCloseEsc(e) {
-    e.code === 'Escape' ? teamModal.close() : teamModal.show();
-  }
-
-  const teamModal = basicLightbox.create(teamCardsMarkup, {
-    onShow: () => {
-      document.body.style.overflow = 'hidden';
-    },
-    onClose: () => {
-      document.body.style.overflow = 'visible';
-      document.removeEventListener('click', onClick);
-      document.removeEventListener('keydown', onCloseEsc);
-    },
-  });
-
-  teamModal.show();
 }

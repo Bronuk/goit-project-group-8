@@ -1,33 +1,11 @@
-<div class='team-section'>
-  <div class='team-section__container'>
-    <h2 class='team__title'>
-      Our TEEM</span>
-    </h2>
-    <ul class='cards-container js-team list'>
-      {{#each this}}
-        <li id='{{id}}' class='card'>
-          <a href='#{{id}}' class='link'>
-            <div class='card__content'>
-              <div class='imgBx'>
-                <img class='imgBx__img' src='{{image}}' alt='{{name}}' />
-              </div>
-              <div class='contentBx'>
-                <h3 class='contentBx__title'>{{name}}<br /><span
-                    class='contentBx__subtitle'
-                  >{{description}}</span></h3>
-              </div>
-            </div>
-            <ul class='sci'>
-              <li class='sci__item' style='--i: 1'>
-                <a class='sci__link' href='{{github}}' rel='noreferrer noopener'><i
-                    class='fa fa-github'
-                    aria-hidden='true'
-                  ></i></a>
-              </li>
-            </ul>
-          </a>
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-</div>
+{{#each this}}
+  <li class='team-item'>
+    <a href='{{github}}' class='team-link'>
+      <img class='team-img' src='{{image}}' alt='{{name}}' width='100' />
+    </a>
+    <div class='team-desc-container'>
+      <p class='team-name'>{{name}}</p>
+      <p class='team-position'>{{description}}</p>
+    </div>
+  </li>
+{{/each}}
