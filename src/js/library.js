@@ -65,7 +65,6 @@ function onQueueBtnClick() {
     return
   }
 
-
   for (const all of queueFilm) {
     try {
       filmoteka.getMovieDetails(all).then(data => {
