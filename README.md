@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, we teem 8</h1>
+<h1 align="center">Hi 👋, we are the Teem 8</h1>
 <h2 align="center">this is our project 
 
   [**Filmoteka**](https://github.com/Bronuk/goit-project-group-8/deployments/activity_log?environment=github-pages) :movie_camera:</h3> 
