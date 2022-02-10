@@ -35,7 +35,7 @@ function onWatchedBtnClick() {
   let watchedFilm = JSON.parse(localStorage.getItem('watched'))
   gallery.innerHTML = '';
 
-  if (localStorage.getItem('watched') === null) {
+  if (localStorage.getItem('watched') === null || localStorage.getItem('watched') === '[]') {
     gallery.innerHTML = greetings;
     return
   }
@@ -60,7 +60,7 @@ function onQueueBtnClick() {
   let queueFilm = JSON.parse(localStorage.getItem('queue'))
   gallery.innerHTML = '';
 
-  if (localStorage.getItem('queue') === null) {
+  if (localStorage.getItem('queue') === null || localStorage.getItem('queue') === '[]') {
     gallery.innerHTML = greetings;
     return
   }
