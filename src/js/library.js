@@ -7,7 +7,6 @@ import genresJSON from './data/genres.json';
 import { get } from 'lodash';
 
 
-
 const watchedBtn = document.querySelector('.watchedBtn');
 const queueBtn = document.querySelector('.queueBtn')
 
@@ -16,15 +15,24 @@ const greetings = `<div class="greetings">
                     <p class="greetings_text">Please choose some movies from Homepage. See you later! ;)</p>
                 </div>`;
 
+const hiMessage = `<div class="greetings">
+                    <p class="greetings_greet">Hello my friend!</p>
+                    <p class="greetings_text">Please choose one of categories above! ;)</p>
+                </div>`;
 
-let watchedFilm = JSON.parse(localStorage.getItem('watched'))
-let queueFilm = JSON.parse(localStorage.getItem('queue'))
+
+
 
 watchedBtn.addEventListener('click', onWatchedBtnClick);
 queueBtn.addEventListener('click', onQueueBtnClick);
 
+startPage()
+function startPage() {
+  gallery.innerHTML = hiMessage;
+}
 
 function onWatchedBtnClick() {
+  let watchedFilm = JSON.parse(localStorage.getItem('watched'))
   gallery.innerHTML = '';
 
   if (localStorage.getItem('watched') === null) {
@@ -49,6 +57,7 @@ function onWatchedBtnClick() {
 }
 
 function onQueueBtnClick() {
+  let queueFilm = JSON.parse(localStorage.getItem('queue'))
   gallery.innerHTML = '';
 
   if (localStorage.getItem('queue') === null) {
