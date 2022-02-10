@@ -5,12 +5,9 @@
 
   padding-top: 60px;
   padding-bottom: 45px;
-    
 }
-.movie-link{
+.movie-link {
   cursor: pointer;
-
-  
 }
 
 // .movie-card {
@@ -21,11 +18,6 @@
   cursor: pointer;
   display: block;
   border-radius: 5px;
-    &:hover,
-    &:focus {
-      box-shadow: (5px -2px 5px #8C8C8C);
-      opacity: 0.9;
-    }
 }
 
 @media screen and (max-width: $max-mobile) {

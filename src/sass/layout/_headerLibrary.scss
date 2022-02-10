@@ -45,6 +45,7 @@
   border: 2px solid #ffffff;
   padding: 14px 38px 14px 38px;
   border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
   cursor: pointer;
   &:not(:last-child) {
     margin-right: 15px;
