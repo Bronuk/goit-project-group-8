@@ -132,3 +132,28 @@
     display: none;
   }
 }
+/////////////
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  background: #c8c8c8ba;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  background-color: #989898ba;
+  color: white;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.back-to-top-icon {
+  width: 25px;
+  height: 20px;
+}
