@@ -6,9 +6,11 @@
 
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     width: $tablet;
+    padding: 0 71px;
   }
 
   @media screen and (min-width: $desktop) {
     width: $desktop;
+    padding: 0 71px;
   }
 }
